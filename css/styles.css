@@ -26,7 +26,6 @@ section::before{
     height: 550px;
     z-index: 1;
     display: flex;
-    background: #FFF;
 }
 h2{
     font-size: 24px;
@@ -84,4 +83,88 @@ h2{
 }
 .sociales  a:hover{
     color: #FFF;
+}
+
+/*Form*/
+.form{
+    position: absolute;
+    width: calc(100% - 200px);
+    height: 100%;
+    background: #FFF;
+    margin-left: 150px;
+    padding: 70px 50px 70px 250px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+.form h2{
+    color: #0F3959;
+}
+.form-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+.input-box{
+    position: relative;
+    margin-bottom: 35px;
+}
+.input-box.w50{
+    width: 48%;
+}
+.input-box.w100{
+    width: 100%;
+}
+.input-box input,
+.input-box textarea{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 18px;
+    color: #333;
+    border: none;
+    border-bottom: 1px solid #777;
+    outline: none;
+    resize: none;
+}
+.input-box textarea{
+    min-height: 120px;
+}
+.input-box span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #888;
+    transition: all .5s;
+    pointer-events: none;
+}
+.input-box input:focus ~ span,
+.input-box input:valid ~ span,
+.input-box textarea:focus ~ span,
+.input-box textarea:valid ~ span{
+    transform: translateY(-20px);
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #03A9F4;
+}
+.input-box.btn{
+    display: flex;
+    justify-content: flex-end;
+}
+.input-box input[type="submit"]{
+    cursor: pointer;
+    background: #0F3959;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #FFF;
+    border: none;
+    width: 30%;
+    padding: 12px;
+    transition: all .5s;
+}
+.input-box input[type="submit"]:hover{
+    background: #03A9F4;
 }
